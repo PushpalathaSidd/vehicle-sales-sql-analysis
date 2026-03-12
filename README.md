@@ -95,15 +95,19 @@ This project demonstrates the use of several important SQL concepts:
 * Revenue trends fluctuate across quarters, highlighting seasonal demand patterns.  
 * Discount patterns vary across different credit card types.  
 * Shipping time analysis provides insight into order fulfillment efficiency.
----
 
+---
 ## Tools Used
 
 - MySQL Workbench  
 - SQL
 
 ---
+## Project Files
 
+vehicle_sales_sql_analysis.sql → Contains all SQL queries used in this analysis.
+
+---
 ## Author
 
 Pushpalatha  
