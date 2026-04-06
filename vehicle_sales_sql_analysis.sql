@@ -28,7 +28,7 @@ USE vehicle_analysis;
 
 /* 1. Database Setup */
 
-create database vehical_analysis;
+create database vehicle_analysis;
 
 /* 2. Data Validation */
 
