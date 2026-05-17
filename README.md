@@ -1,114 +1,123 @@
 # Vehicle Sales Data Analysis using SQL
 
-## Project Overview
-This project analyzes vehicle sales data to uncover insights related to customer behavior, product popularity, sales performance, and operational efficiency.  
-Using SQL, the analysis focuses on identifying patterns in customer distribution, vehicle preferences, revenue trends, feedback ratings, discounts, and shipping performance.
-
-The objective of this project is to demonstrate practical SQL skills used in real-world data analysis tasks.
+![MySQL](https://img.shields.io/badge/MySQL-Database-blue?logo=mysql)
+![SQL](https://img.shields.io/badge/SQL-Data%20Analysis-orange)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 ---
 
-## Dataset Description
+## Project Overview
 
-The analysis uses three main tables:
+This project analyzes vehicle sales data using SQL to uncover insights related
+to customer behavior, vehicle preferences, revenue trends, discount patterns,
+and shipping efficiency. The analysis demonstrates practical SQL skills applied
+to real-world business questions across three relational tables.
 
-Customer Table (customer_t)
-- customer_id
-- state
-- credit_card_type
-- customer_feedback
+---
 
-Order Table (order_t)
-- order_id
-- customer_id
-- product_id
-- quantity
-- vehicle_price
-- discount
-- order_date
-- ship_date
-- quarter_number
+## Sample Query Output
 
-Product Table (product_t)
-- product_id
-- vehicle_maker
-- vehicle_model
-- vehicle_color
-- vehicle_model_year
-- vehicle_price
+<img width="584" height="373" alt="image" src="https://github.com/user-attachments/assets/ce5a326a-92dd-4bad-886f-e6ce0f16a8c3" />
+
+---
+
+## Database Schema
+
+Three relational tables are used in this analysis:
+
+| Table        | Key Columns                                                        |
+|--------------|--------------------------------------------------------------------|
+| customer_t   | customer_id, state, credit_card_type, customer_feedback            |
+| order_t      | order_id, customer_id, product_id, quantity, vehicle_price,        |
+|              | discount, order_date, ship_date, quarter_number                    |
+| product_t    | product_id, vehicle_maker, vehicle_model, vehicle_color,           |
+|              | vehicle_model_year, vehicle_price                                  |
 
 ---
 
 ## Business Questions Solved
 
-1. Customer Distribution by State  
-Identify which states have the highest number of customers.
-
-2. Average Customer Feedback by Quarter  
-Convert customer feedback categories into numerical scores and calculate the average satisfaction rating.
-
-3. Customer Feedback Trend Analysis  
-Analyze whether customer satisfaction changes across quarters.
-
-4. Top 5 Vehicle Makers Preferred by Customers  
-Determine which vehicle manufacturers are most popular based on purchases.
-
-5. State-wise Most Preferred Vehicle Maker  
-Identify the most popular vehicle brand in each state using ranking functions.
-
-6. Order Trend by Quarter  
-Analyze how the number of orders changes over different quarters.
-
-7. Quarter-over-Quarter Revenue Change  
-Calculate revenue for each quarter and measure percentage change using window functions.
-
-8. Revenue and Order Trend by Quarter  
-Analyze both revenue and order count trends over time.
-
-9. Average Discount by Credit Card Type  
-Determine which credit card types receive higher discounts.
-
-10. Average Shipping Time by Quarter  
-Measure order fulfillment efficiency using shipping duration.
+| No. | Business Question                              | SQL Concepts Used              |
+|-----|------------------------------------------------|-------------------------------|
+| 1   | Customer distribution by state                 | GROUP BY, COUNT, ORDER BY     |
+| 2   | Average feedback rating by quarter             | CTE, CASE, AVG                |
+| 3   | Customer feedback trend over time              | CTE, CASE, percentage calc    |
+| 4   | Top 5 most preferred vehicle makers            | JOIN, GROUP BY, LIMIT         |
+| 5   | State-wise most preferred vehicle maker        | JOIN, RANK(), window function |
+| 6   | Order volume trend by quarter                  | GROUP BY, COUNT               |
+| 7   | Quarter-over-quarter revenue change            | CTE, LAG(), window function   |
+| 8   | Revenue and order trend by quarter             | GROUP BY, SUM, COUNT          |
+| 9   | Average discount by credit card type           | JOIN, AVG, GROUP BY           |
+| 10  | Average shipping time by quarter               | DATEDIFF, AVG, GROUP BY       |
 
 ---
 
-## SQL Concepts Used
+## SQL Concepts Demonstrated
 
-This project demonstrates the use of several important SQL concepts:
-
-- SQL Joins
+- SQL Joins (INNER JOIN across multiple tables)
 - Aggregate Functions (SUM, COUNT, AVG)
-- CASE Statements
+- CASE Statements for data transformation
 - GROUP BY and ORDER BY
 - Window Functions (RANK, LAG)
 - Common Table Expressions (CTE)
 - Date Functions (DATEDIFF)
-- Data Transformation Techniques
+- Quarter-over-Quarter percentage change calculation
 
 ---
 
 ## Key Insights
 
-* Certain states show higher customer concentration, indicating stronger regional demand.  
-* A small group of vehicle manufacturers dominates total purchases.  
-* Revenue trends fluctuate across quarters, highlighting seasonal demand patterns.  
-* Discount patterns vary across different credit card types.  
-* Shipping time analysis provides insight into order fulfillment efficiency.
+- Certain states show significantly higher customer concentration
+- A small group of vehicle manufacturers dominates total purchases
+- Revenue fluctuates across quarters, indicating seasonal demand patterns
+- Discount offerings vary across different credit card types
+- Shipping time analysis reveals order fulfillment efficiency trends
+- Customer satisfaction scores show measurable changes quarter over quarter
 
 ---
+
 ## Tools Used
 
-- MySQL Workbench  
-- SQL
+| Tool              | Purpose                        |
+|-------------------|--------------------------------|
+| MySQL             | Database and query execution   |
+| MySQL Workbench   | SQL development environment    |
 
 ---
-## Project Files
 
-vehicle_sales_sql_analysis.sql → Contains all SQL queries used in this analysis.
+## How to Run
+
+1. Clone this repository:
+   git clone https://github.com/PushpalathaSidd/vehicle-sales-sql-analysis.git
+
+2. Open MySQL Workbench and connect to your local server
+
+3. Create the database:
+   CREATE DATABASE vehicle_analysis;
+   USE vehicle_analysis;
+
+4. Import your dataset tables (customer_t, order_t, product_t)
+
+5. Open and run vehicle_sales_sql_analysis.sql
 
 ---
+
+## Files Included
+
+vehicle-sales-sql-analysis/
+vehicle_sales_sql_analysis.sql   — All SQL queries with comments
+README.md                        — Project documentation
+
+---
+
 ## Author
 
-Pushpalatha  
-Aspiring Data Analyst
+Pushpalatha Sidd
+
+- LinkedIn: https://www.linkedin.com/in/pushpalatha-s-1a6187285/
+- GitHub: https://github.com/PushpalathaSidd
+- Tableau: https://public.tableau.com/app/profile/pushpalatha.sidd/vizzes
+
+---
+
+This project is part of my data analytics portfolio. Feedback and suggestions are welcome.
